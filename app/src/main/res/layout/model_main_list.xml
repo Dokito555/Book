@@ -42,7 +42,7 @@
                 android:id="@+id/addMark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_mark"
+                android:src="@drawable/ic_real_mark"
                 android:layout_weight="10"
                 android:layout_marginTop="14dp"
                 android:background="@android:color/transparent"/>

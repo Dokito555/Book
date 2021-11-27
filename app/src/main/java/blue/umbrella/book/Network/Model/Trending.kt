@@ -212,7 +212,7 @@ data class Attributes(
 	val subtype: String? = null,
 
 	@field:SerializedName("averageRating")
-	val averageRating: String? = null,
+	val averageRating: String? = "-",
 
 	@field:SerializedName("coverImage")
 	val coverImage: CoverImage? = null,
@@ -233,7 +233,7 @@ data class Attributes(
 	val updatedAt: String? = null,
 
 	@field:SerializedName("chapterCount")
-	val chapterCount: Any? = null,
+	val chapterCount: Any? = "-",
 
 	@field:SerializedName("mangaType")
 	val mangaType: String? = null,
@@ -251,7 +251,7 @@ data class Attributes(
 	val favoritesCount: Int? = null,
 
 	@field:SerializedName("serialization")
-	val serialization: String? = null,
+	val serialization: String? = "-",
 
 	@field:SerializedName("coverImageTopOffset")
 	val coverImageTopOffset: Int? = null,

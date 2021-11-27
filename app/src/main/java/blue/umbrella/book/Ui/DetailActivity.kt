@@ -1,14 +1,12 @@
 package blue.umbrella.book.Ui
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
-import blue.umbrella.book.Network.MainData
-import blue.umbrella.book.R
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import blue.umbrella.book.databinding.ActivityDetailBinding
-import java.net.URL
+import com.bumptech.glide.Glide
 
 class DetailActivity : AppCompatActivity() {
 
@@ -41,7 +39,10 @@ class DetailActivity : AppCompatActivity() {
             tvRatingCount.text = getRating
 
             val getImage = getExtras!!.getInt("Image")
-            itemImg.setImageResource(getImage)
+            Glide
+                .with(binding.root)
+                .load(getImage)
+                .into(itemImg)
 
             val getChapter = getExtras!!.getInt("Chapter")
             tvChapterCount.text = getChapter.toString()
@@ -55,6 +56,5 @@ class DetailActivity : AppCompatActivity() {
             supportActionBar!!.hide()
 
         }
-
     }
 }

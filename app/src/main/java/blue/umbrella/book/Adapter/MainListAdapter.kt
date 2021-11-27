@@ -47,8 +47,8 @@ class MainListAdapter : RecyclerView.Adapter<MainListAdapter.MListVH>() {
                 tvStatus.text = list.attributes?.status
 
                 addMark.setOnClickListener {
+                    Snackbar.make(root, "Add to Bookmark", Snackbar.LENGTH_LONG).show()
                     addMark.setColorFilter(Color.parseColor("#787878"))
-                    Snackbar.make(root, "Marked", Snackbar.LENGTH_LONG).show()
                 }
 
                 val showStatus = list.attributes?.status
